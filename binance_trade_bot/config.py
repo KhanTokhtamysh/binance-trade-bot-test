@@ -23,6 +23,7 @@ class Config:  # pylint: disable=too-few-public-methods,too-many-instance-attrib
             "strategy": "default",
             "sell_timeout": "0",
             "buy_timeout": "0",
+            "testnet": "True"
         }
 
         if not os.path.exists(CFG_FL_NAME):
@@ -51,6 +52,7 @@ class Config:  # pylint: disable=too-few-public-methods,too-many-instance-attrib
         self.BINANCE_API_KEY = os.environ.get("API_KEY") or config.get(USER_CFG_SECTION, "api_key")
         self.BINANCE_API_SECRET_KEY = os.environ.get("API_SECRET_KEY") or config.get(USER_CFG_SECTION, "api_secret_key")
         self.BINANCE_TLD = os.environ.get("TLD") or config.get(USER_CFG_SECTION, "tld")
+        self.TESTNET = os.environ.get("TESTNET") or config.get(USER_CFG_SECTION, "testnet")
 
         # Get supported coin list from the environment
         supported_coin_list = [

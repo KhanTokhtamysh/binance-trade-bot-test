@@ -29,6 +29,9 @@ class AutoTrader:
     def transaction_through_bridge(self, pair: Pair):
         """
         Jump from the source coin to the destination coin through bridge coin
+        checks if enough balance of bridge coin vs min_notional
+
+
         """
         can_sell = False
         balance = self.manager.get_currency_balance(pair.from_coin.symbol)
