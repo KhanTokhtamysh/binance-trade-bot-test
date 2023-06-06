@@ -21,7 +21,7 @@ class BinanceAPIManager:
             config.BINANCE_API_KEY,
             config.BINANCE_API_SECRET_KEY,
             tld=config.BINANCE_TLD,
-            testnet=config.TESTNET
+            testnet=True
         )
         self.db = db
         self.logger = logger

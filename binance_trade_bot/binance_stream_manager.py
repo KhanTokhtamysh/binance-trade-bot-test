@@ -78,7 +78,8 @@ class BinanceStreamManager:
         self.bw_api_manager = BinanceWebSocketApiManager(
             output_default="UnicornFy",
             enable_stream_signal_buffer=True,
-            exchange=f"binance.{config.BINANCE_TLD}",
+            # remove -testnet to switch to actual account
+            exchange=f"binance.{config.BINANCE_TLD}-testnet",
         )
         self.bw_api_manager.create_stream(
             ["arr"],

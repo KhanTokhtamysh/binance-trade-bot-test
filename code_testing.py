@@ -14,3 +14,5 @@ logger.info("Starting")
 config = Config()
 db = Database(logger, config)
 manager = BinanceAPIManager(config, db, logger)
+
+print(manager.get_account())
